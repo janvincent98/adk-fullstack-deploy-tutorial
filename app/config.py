@@ -48,7 +48,7 @@ class AgentConfiguration:
 
     # Google Cloud settings
     project_id: str | None = None
-    location: str = "europe-west4"
+    location: str | None = None
     staging_bucket: str | None = None
 
     def __post_init__(self) -> None:
