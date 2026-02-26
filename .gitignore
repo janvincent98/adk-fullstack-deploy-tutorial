@@ -241,3 +241,6 @@ Thumbs.db
 
 # Other
 web/
+
+.gemini/
+gha-creds-*.json

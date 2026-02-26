@@ -135,6 +135,9 @@ def deploy_agent_engine_app() -> agent_engines.AgentEngine:
         ),
     )
 
+    # Configure service account
+    service_account = deployment_config.service_account
+
     # Step 7: Configure the agent for deployment
     agent_config = {
         "agent_engine": agent_engine,
@@ -143,6 +146,7 @@ def deploy_agent_engine_app() -> agent_engines.AgentEngine:
         "extra_packages": deployment_config.extra_packages,
         "env_vars": env_vars,
         "requirements": requirements,
+        "service_account": service_account,
     }
 
     # Step 8: Deploy or update the agent
